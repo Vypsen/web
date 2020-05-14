@@ -55,13 +55,14 @@ $('#matrix').on('click', makeMatrix)
 $('#matrix-sorted').on('click', sortMatrix)
 
 function printMatrix(el, a) {
-    el.html('')
+    let element = $(el)
+    element.html('')
     
     for (let i = 0; i < a.length; i++) {
-        el.append(`<div class="row-${i} zzz"></div>`)
+        element.append(`<div class="${el} row-${i} zzz"></div>`)
 
         for (let j = 0; j < a[i].length; j++) {
-            $(`.row-${i}`).append(`<div>${a[i][j]}</div>`)
+            $(`${el} .row-${i}`).append(`<div>${a[i][j]}</div>`)
         }
     }
 } 
@@ -84,7 +85,7 @@ function makeMatrix() {
         }     
     }
 
-    printMatrix($('#matrix-print'), matrix)
+    printMatrix('#matrix-print', matrix)
 }
 
 function sortMatrix(){
@@ -93,7 +94,7 @@ function sortMatrix(){
     for(let i = 0; i < n; i++ ){
         matrix[i].sort((a, b) => a - b)
     }
-    printMatrix()
+    printMatrix('#matrix-sorted-print', matrix)
 }
 
 // Задание 4.4
@@ -143,7 +144,7 @@ function getResultArray() {
 
     console.log(m)
 
-    printMatrix($('#snake-output'), m)
+    printMatrix('#snake-output', m)
 }
 
 

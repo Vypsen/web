@@ -1,2 +1,3 @@
 # web 
-https://vypsen.github.io/web/index.html
+https://github.com/Vypsen/web/index.html
+

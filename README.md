@@ -1,3 +1,3 @@
 # web 
-https://github.com/Vypsen/web/index.html
+Vypsen/web/index.html
 

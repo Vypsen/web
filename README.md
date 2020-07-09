@@ -1,3 +1,3 @@
 # web 
-Vypsen/web/index.html
+https://vypsen.github.io/web
 

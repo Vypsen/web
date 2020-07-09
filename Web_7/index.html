@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ShooterGame</title>
+    <script src="scripts/levelsTable.js"></script>
+    <script src="scripts/code.js"></script>
+    <script src="scripts/guns.js"></script>
+    <script src="scripts/enemies.js"></script>
+    <script src="scripts/collider.js"></script>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+
+<div class="helloScreen">
+    <div class="vertical-center">
+        <label for="nickname">Введите никнейм</label><br>
+        <input id="nickname" type="text" value="nickname"><br>
+        <button id="startGame" onclick="init()">Начать игру</button>
+    </div>
+</div>
+
+<div class="content" style="display: none">
+    <canvas id="gameField" width="1000" height="500"></canvas>
+    <br>
+    <button class="changeGun" id="gunType0" style="background-color: lightsteelblue;">Пушка</button>
+    <button class="changeGun" id="gunType1">Черная дыра</button>
+    <button class="changeGun" id="gunType2">Пулемет</button>
+    <button id="pause">Пауза</button>
+    <br><br>
+    <button id="restart">Начать заново</button>
+    <button id="changePlayer">Сменить игрока</button>
+    <button id="showResults">Покзать результаты</button>
+</div>
+
+
+<div class="resultsScreen" style="display: none">
+    <p id="resultsText">Топ 10 игроков</p>
+    <table>
+        <thead>
+        <tr>
+            <td>Место</td>
+            <td>Никнейм</td>
+            <td>Результат</td>
+        </tr>
+        </thead>
+
+        <tbody id="resultsBody">
+        </tbody>
+    </table>
+    <button id="resultsBack">Вернуться к игре</button>
+</div>
+
+</body>
+
+</html>
